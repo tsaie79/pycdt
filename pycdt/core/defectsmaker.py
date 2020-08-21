@@ -848,7 +848,9 @@ class ChargedDefectsStructures(object):
         Returns:
             sc (Structure): copy of the defect supercell.
         """
-        return self.defects[defect_type][i]['supercell'][
-            'structure'].copy()
+        if defect_type == "bulk":
+            return self.defects[defect_type]["supercell"]["structure"].copy()
+        else:
+            return self.defects[defect_type][i]['supercell']['structure'].copy()
 
 
