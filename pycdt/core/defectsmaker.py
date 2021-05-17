@@ -40,9 +40,9 @@ def get_optimized_sc_scale(inp_struct, final_site_no):
 
     dictio={}
     result=[]
-    for k1 in range(1,6):
-        for k2 in range(1,6):
-            for k3 in range(1,6):
+    for k1 in range(1,10):
+        for k2 in range(1,10):
+            for k3 in range(1,10):
                 struct = inp_struct.copy()
                 struct.make_supercell([k1, k2, k3])
                 if len(struct.sites) > final_site_no:
